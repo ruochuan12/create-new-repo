@@ -1,52 +1,37 @@
-name: CI
+name: 'ci'
 on:
-  - push
-  - pull_request
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - main
 jobs:
   test:
-    name: Node.js ${{ matrix.node-version }}
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
-      fail-fast: false
       matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+          - windows-latest
         node-version:
-          - 16
+          - 14
+        include:
+          - node-version: 12
+            os: ubuntu-latest
+          - node-version: 16
+            os: ubuntu-latest
+    name: Node ${{ matrix.node-version }} on ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6
       - uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm i -g pnpm
+          cache: 'pnpm'
       - run: pnpm install
       - run: pnpm test
       - run: pnpm build
-
-# https://github.com/vitejs/docs-cn/blob/main/.github/workflows/deploy.yml
-# name: Deploy to Gitee
-
-# on:
-#   push:
-#     branches:
-#       - main
-
-# jobs:
-#   deploy:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v2
-#       - name: Set node version to 16
-#         uses: actions/setup-node@v2
-#         with:
-#           node-version: 16
-#           cache: 'pnpm'
-#       - run: pnpm
-#       - run: pnpm test
-#       - run: |
-#           cd .vitepress/dist
-#           git init
-#           git config user.email "yyx990803@gmail.com"
-#           git config user.name "Evan You"
-#           git add .
-#           git commit -m "update docs"
-#           git remote add origin https://yyx990803:${{ secrets.GITEE_TOKEN }}@gitee.com/vuejs-cn/vite-docs-cn.git
-#           git push origin HEAD:master --force

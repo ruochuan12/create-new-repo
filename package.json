@@ -3,9 +3,10 @@
   "version": "0.0.3-0",
   "description": "create-repo",
   "main": "index.js",
-  "bin": "dist/index.cjs",
+  "bin": {
+    "create-new-repo": "dist/index.cjs"
+  },
   "type": "module",
-  "exports": "./index.js",
   "engines": {
     "node": ">=12.20"
   },
