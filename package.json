@@ -5,11 +5,18 @@
   "main": "index.js",
   "bin": "index.js",
   "type": "module",
+	"exports": "./index.js",
+	"engines": {
+		"node": ">=12.20"
+	},
   "scripts": {
     "test": "xo && ava",
     "commit": "git-cz",
     "preinstall": "npx only-allow pnpm"
   },
+	"files": [
+		"index.js"
+	],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lxchuan12/create-repo.git"
@@ -34,6 +41,7 @@
     "@release-it/conventional-changelog": "^3.3.0",
     "ava": "^3.15.0",
     "git-cz": "^4.8.0",
+    "release-it": "^14.11.8",
     "xo": "^0.47.0"
   },
   "release-it": {
