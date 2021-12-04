@@ -8,12 +8,12 @@
   },
   "type": "module",
   "engines": {
-    "node": ">=12.20"
+    "node": "^12.13.0 || ^14.0.0 || >= 16.0.0"
   },
   "scripts": {
     "test": "xo && ava",
     "commit": "git-cz",
-    "build": "esbuild --bundle index.js --format=cjs --platform=node --outfile=dist/index.cjs",
+    "build": "esbuild --bundle index.js --format=cjs --platform=node --target=node12 --outfile=dist/index.cjs",
     "release": "release-it"
   },
   "files": [
