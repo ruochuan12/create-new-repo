@@ -3,7 +3,7 @@
   "version": "0.0.3-0",
   "description": "create-repo",
   "main": "index.js",
-  "bin": "index.js",
+  "bin": "dist/index.cjs",
   "type": "module",
   "exports": "./index.js",
   "engines": {
@@ -12,10 +12,11 @@
   "scripts": {
     "test": "xo && ava",
     "commit": "git-cz",
+    "build": "esbuild --bundle index.js --format=cjs --platform=node --outfile=dist/index.cjs",
     "release": "release-it"
   },
   "files": [
-    "index.js"
+    "dist/index.cjs"
   ],
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
   "devDependencies": {
     "@release-it/conventional-changelog": "^3.3.0",
     "ava": "^3.15.0",
+    "esbuild": "^0.14.2",
     "git-cz": "^4.8.0",
     "release-it": "^14.11.8",
     "xo": "^0.47.0"
