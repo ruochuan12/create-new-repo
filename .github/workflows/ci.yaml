@@ -19,6 +19,7 @@ jobs:
       - run: npm i -g pnpm
       - run: pnpm install
       - run: pnpm test
+      - run: pnpm build
 
 # https://github.com/vitejs/docs-cn/blob/main/.github/workflows/deploy.yml
 # name: Deploy to Gitee
