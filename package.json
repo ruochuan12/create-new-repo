@@ -12,7 +12,6 @@
   "scripts": {
     "test": "xo && ava",
     "commit": "git-cz",
-    "preinstall": "npx only-allow pnpm",
     "release": "release-it"
   },
   "files": [
