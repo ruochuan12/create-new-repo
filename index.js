@@ -1,5 +1,8 @@
-import execa from 'execa'
-export async function main(){
-    await execa.command('echo ruochuan');
+import {execaCommand} from 'execa';
+
+export async function main() {
+	const {stdout} = await execaCommand('echo ruochuan');
+	return stdout;
 }
+
 main();
