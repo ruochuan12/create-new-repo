@@ -1,5 +1,5 @@
-# create-repo
+# create-new-repo
 
 ```js
-npm init repo
+npm init new-repo@next
 ```
