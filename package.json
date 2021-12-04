@@ -1,7 +1,7 @@
 {
   "name": "create-new-repo",
   "version": "0.0.3-0",
-  "description": "create-repo",
+  "description": "create-new-repo",
   "main": "index.js",
   "bin": {
     "create-new-repo": "dist/index.cjs"
@@ -21,15 +21,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lxchuan12/create-repo.git"
+    "url": "git+https://github.com/lxchuan12/create-new-repo.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lxchuan12/create-repo/issues"
+    "url": "https://github.com/lxchuan12/create-new-repo/issues"
   },
-  "homepage": "https://github.com/lxchuan12/create-repo#readme",
+  "homepage": "https://github.com/lxchuan12/create-new-repo#readme",
   "dependencies": {
     "execa": "^6.0.0",
     "minimist": "^1.2.5"
