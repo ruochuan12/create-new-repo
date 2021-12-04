@@ -1,0 +1,48 @@
+{
+  "name": "create-repo",
+  "version": "0.0.1",
+  "description": "create-repo",
+  "main": "index.js",
+  "bin": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "xo && ava",
+    "commit": "git-cz",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lxchuan12/create-repo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lxchuan12/create-repo/issues"
+  },
+  "homepage": "https://github.com/lxchuan12/create-repo#readme",
+  "dependencies": {
+    "execa": "^6.0.0",
+    "minimist": "^1.2.5"
+  },
+  "xo": {
+    "ignores": [
+      "test/test.js"
+    ]
+  },
+  "devDependencies": {
+    "@release-it/conventional-changelog": "^3.3.0",
+    "ava": "^3.15.0",
+    "git-cz": "^4.8.0",
+    "xo": "^0.47.0"
+  },
+  "release-it": {
+    "npm": {},
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular",
+        "infile": "CHANGELOG.md"
+      }
+    }
+  }
+}
