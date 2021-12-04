@@ -1,3 +1,5 @@
+## [0.0.3-2](https://github.com/lxchuan12/create-new-repo/compare/0.0.3-1...0.0.3-2) (2021-12-04)
+
 ## [0.0.3-1](https://github.com/lxchuan12/create-new-repo/compare/0.0.2...0.0.3-1) (2021-12-04)
 
 
