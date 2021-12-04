@@ -50,7 +50,6 @@
       "commitMessage": "chore: release v${version}"
     },
     "npm": {
-      "skipChecks": true
     },
     "plugins": {
       "@release-it/conventional-changelog": {
