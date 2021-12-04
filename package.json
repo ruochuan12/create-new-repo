@@ -46,7 +46,12 @@
     "xo": "^0.47.0"
   },
   "release-it": {
-    "npm": {},
+    "git": {
+      "commitMessage": "chore: release v${version}"
+    },
+    "npm": {
+      "skipChecks": true
+    },
     "plugins": {
       "@release-it/conventional-changelog": {
         "preset": "angular",
