@@ -7,9 +7,9 @@ export async function main() {
 }
 
 main()
-.then(res => {
-	console.log('success');
-})
-.catch(err => {
-	console.log(err);
-});
+	.then(res => {
+		console.log('success', res);
+	})
+	.catch(err => {
+		console.log(err);
+	});
