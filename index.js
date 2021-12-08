@@ -6,4 +6,10 @@ export async function main() {
 	return stdout;
 }
 
-main();
+main()
+.then(res => {
+	console.log('success');
+})
+.catch(err => {
+	console.log(err);
+});
