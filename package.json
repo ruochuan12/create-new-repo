@@ -4,7 +4,7 @@
   "description": "create-new-repo",
   "main": "index.js",
   "bin": {
-    "create-new-repo": "dist/index.cjs"
+    "create-new-repo": "bin/index.js"
   },
   "type": "module",
   "engines": {
@@ -17,7 +17,8 @@
     "release": "release-it"
   },
   "files": [
-    "dist/index.cjs"
+    "dist",
+    "bin"
   ],
   "repository": {
     "type": "git",
