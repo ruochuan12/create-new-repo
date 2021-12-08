@@ -1,3 +1,10 @@
+## [0.0.4-beta.1](https://github.com/lxchuan12/create-new-repo/compare/0.0.4-beta.0...0.0.4-beta.1) (2021-12-08)
+
+
+### Features
+
+* 🎸 添加 bin 路径 ([24120c1](https://github.com/lxchuan12/create-new-repo/commit/24120c1f365d7b6336becb2601d34f461a7337f2))
+
 ## [0.0.4-beta.0](https://github.com/lxchuan12/create-new-repo/compare/0.0.3-2...0.0.4-beta.0) (2021-12-08)
 
 
